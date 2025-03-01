@@ -1,0 +1,201 @@
+/* Reset default margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/assets/Spider_Bite.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomFont2';
+  src: url('/assets/I\ Still\ Know.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global Styles */
+body {
+  background-color: #000000;
+  max-width: 2681px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+/* Navigation Bar */
+nav {
+  width: 100%; 
+  max-width: 2681px; 
+  margin: 0 auto;
+  border: 1px solid red;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.1rem;
+  font-family: 'CustomFont2';
+}
+
+/* Remove default list styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  position: relative;
+}
+
+/* Links */
+nav li a {
+  color: #f9fbff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Dropdown Menu (Initially Hidden) */
+.dropdown-menu {
+  position: absolute;
+  top: 56px;
+  right: -30px;
+  border: 1px solid red;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  color: #f9fbff;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Active Dropdown (Show on Click) */
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.intro {
+  border: 1px solid red;
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the left */
+  align-items: center;
+  position: absolute;
+  left: 5%; /* Keeps spacing from the left */
+  width: 90%; /* Makes it responsive */
+  max-width: 700px; /* Ensures it doesn’t stretch too much */
+  padding: 20px;
+}
+
+.intro h1{
+  font-family: 'CustomFont2';
+  font-size: 150px;
+  color: #f9fbff;
+}
+
+/* 4K Ultra-Wide Screens (2560px and above) */
+@media (min-width: 2560px) {
+  nav {
+    max-width: 2681px;
+  }
+
+  .intro {
+    max-width: 1440px;
+    width: 80%; /* Ensures scalability */
+    left: 15%;
+    position: absolute;
+  }
+
+}
+
+
+/* XL */
+@media (max-width: 1440px) {
+  .intro{
+    max-width: 1024px;
+    left: 8%;
+  }
+
+  .intro h1{
+    font-size: 100px;
+  }
+}
+
+
+
+/* LG */
+@media (max-width: 1024px) {
+  .intro{
+    max-width: 768px;
+    left: 5%;
+  }
+
+  .intro h1{
+    font-size: 80px;
+  }
+
+}
+
+
+/* SM (Max 640px) - Adjust for Mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack items on mobile */
+    align-items: flex-end;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+
+  .intro {
+    width: 100%;
+    max-width: 425px;
+    text-align: center;
+    padding: 10px;
+    top: 11.5%;
+  }
+
+  .intro h1{
+    font-size: 50px;
+  }
+}
+
+/* XS (Max 475px) - Small Mobile */
+@media (max-width: 425px) {
+  .intro {
+    width: 100%;
+    max-width: 96%;
+    text-align: center;
+    padding: 5px;
+    top: 11.5%;
+    left: 2%;
+  }
+
+  .intro h1{
+    font-size: 60px;
+  }
+}
