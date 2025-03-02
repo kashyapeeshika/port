@@ -3,6 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #020100;
+  color: #FDFFFC;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* For the accent color */
+#accent{
+  /* color: #9BE564; */
+  /* color: #69FFF1; */
+  color: #00BB70;
 }
 
 /* Custom Fonts */
@@ -13,34 +23,56 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'CustomFont2';
-  src: url('/assets/I\ Still\ Know.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* Global Styles */
 body {
-  background-color: #000000;
-  max-width: 2681px;
+  max-width: 2560px;
   margin: 0 auto;
   padding: 0 0.5rem;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem; 
+}
+
+
+.intro,
+.links{
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+
+}
+
 /* Navigation Bar */
-nav {
+nav,
+.links,
+footer{
   width: 100%; 
+  max-width: 80rem;
   max-width: 2681px; 
   margin: 0 auto;
   border: 1px solid red;
   padding: 15px 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   font-size: 1.1rem;
-  font-family: 'CustomFont2';
+  position: absolute;
+  left: 0;
+  /* padding-right: 90px; */
 }
+
+/* Logo Styling */
+.logo a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-left: 90px;
+}
+
 
 /* Remove default list styles */
 nav ul {
@@ -48,15 +80,18 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  align-items: center;
 }
+
 
 nav li {
   position: relative;
+  margin-left: 20px;
+  z-index: 2;
 }
 
 /* Links */
 nav li a {
-  color: #f9fbff;
   text-decoration: none;
   padding: 10px 15px;
   display: block;
@@ -84,7 +119,6 @@ nav li a {
 
 .dropdown-menu a {
   padding: 10px 15px;
-  color: #f9fbff;
   display: block;
   transition: 0.3s;
 }
@@ -99,32 +133,100 @@ nav li a {
 }
 
 .intro {
-  border: 1px solid red;
   display: flex;
-  justify-content: flex-start; /* Aligns content to the left */
   align-items: center;
-  position: absolute;
-  left: 5%; /* Keeps spacing from the left */
-  width: 90%; /* Makes it responsive */
-  max-width: 700px; /* Ensures it doesn’t stretch too much */
+  position: relative;
+  top: 5.5rem; 
+  left: 5%;
+  width: 90%;
+  max-width: 80rem;
   padding: 20px;
+  border: 1px solid red;
 }
 
 .intro h1{
-  font-family: 'CustomFont2';
   font-size: 150px;
-  color: #f9fbff;
 }
+
+.links {
+  display: flex;
+  margin-top: auto; 
+  position: absolute;
+  top: 50em;
+  left: 0;
+  padding-left: 8rem;
+  padding-right: 100px;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 10rem;
+  left: 5rem;
+  width: 90%;
+  max-width: 80rem;
+  padding: 20px;
+  font-size: 6rem;
+  border: 1px solid red;
+  margin-top: 5rem;
+}
+
+.project-desp{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 10rem;
+  left: 5rem;
+  width: 90%;
+  max-width: 80rem;
+  padding: 20px;
+  font-size: 4rem;
+  border: 1px solid red;
+
+}
+
+.project-container{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 10rem;
+  left: 5rem;
+  width: 100%;
+  max-width: 80rem;
+  padding: 20px;
+  border: 1px solid red;
+}
+
+.project-container h1 {
+  width: 20rem;
+  margin-bottom: 5rem;
+  border-bottom: 2px solid #00BB70; 
+}
+
+footer{
+  position: relative;
+  top: 10rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
 
 /* 4K Ultra-Wide Screens (2560px and above) */
 @media (min-width: 2560px) {
-  nav {
+  nav,
+  .links {
     max-width: 2681px;
   }
 
   .intro {
     max-width: 1440px;
-    width: 80%; /* Ensures scalability */
+    width: 80%; 
     left: 15%;
     position: absolute;
   }
@@ -162,8 +264,9 @@ nav li a {
 
 /* SM (Max 640px) - Adjust for Mobile */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column; /* Stack items on mobile */
+  nav,
+  .links {
+    flex-direction: column; 
     align-items: flex-end;
   }
   
@@ -176,7 +279,7 @@ nav li a {
     max-width: 425px;
     text-align: center;
     padding: 10px;
-    top: 11.5%;
+    top: 19.5%;
   }
 
   .intro h1{
@@ -191,11 +294,16 @@ nav li a {
     max-width: 96%;
     text-align: center;
     padding: 5px;
-    top: 11.5%;
+    top: 19.5%;
     left: 2%;
   }
 
   .intro h1{
     font-size: 60px;
   }
+
+  .logo{
+    font-size: 60px;
+  }
+
 }

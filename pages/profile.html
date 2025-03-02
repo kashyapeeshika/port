@@ -3,76 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <title>Eeshika | Portfolio</title>
+    <link rel="stylesheet" href="/style/home.css">
 </head>
 <body>
     <header>
-        <!-- Navigation Bar -->
         <nav>
-            <div class="nav-links">
-                <a href="#" id="link">Eeshika Kashyap</a>
-                <a href="/pages/home.html">Home</a>
-                <a href="/pages/index.html">Index</a>
+            <div class="logo">
+                <a href="/pages/profile.html" id="accent">EK</a>
             </div>
-        </nav>
+            <ul class="nav">
+                <li><a href="/pages/home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Index</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/pages/profile.html">Profile</a></li>
+                        <li><a href="/pages/echo.html">Echo</a></li>
+                        <li><a href="/pages/dashboard.html">Dashboard</a></li>
+                        <li><a href="/pages/pal.html">Pal</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav> 
     </header>
 
     <main>
-        <div class="look">
-            <h1>A closer look at my profile</h1>
-        </div>
+        <section class="intro">
+            <h1>A <span id="accent">Closer</span> Look<br>At My <span id="accent">Profile</span></h1>
+        </section>
 
-        <!-- Social Links -->
-        <ul class="social-links">
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Figma</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">kashyapeeshika@gmail.com</a></li>
-        </ul>
+        <section class="links">
+            <div class="linkeIn">
+                <a href="#">LinkeIn</a>
+            </div>
+            <div class="gmail">
+                <a href="#">kashyapeeshika@gmail.com</a>
+            </div>
+        </section>
 
-        <!-- SVG -->
-         <div class="laptop">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1439" height="2729" viewBox="0 0 1439 2729" fill="none">
-                <path d="M1 123.087C28.5344 129.784 25.645 149.185 50.7149 144.753C75.7848 140.322 74.4711 155.314 87.6824 159.526C105.393 170.256 117.184 171.259 139.522 171.836C166.742 167.367 177.969 161.735 194.761 149.185C204.556 144.234 209.17 141.135 215.581 134.905C219.519 126.929 219.785 122.765 211.757 116.686C208.071 114.99 205.965 114.028 201.984 112.254C194.554 106.916 193.384 104.838 201.984 104.375L219.831 108.807C227.638 111.31 230.178 108.039 233.003 104.375L260.622 75.8152C277.546 60.5803 278.8 55.1779 268.696 50.2096L215.581 20.1722C207.079 12.8195 207.74 9.46073 215.581 4.90727C234.508 7.18105 243.865 10.4748 260.622 16.2328L279.318 26.5736C293.312 32.3854 299.324 31.3104 307.788 23.1267L330.733 4.90727C342.718 -4.05511 348.527 4.86176 349.004 7.36935C349.481 9.87695 345.757 19.4979 340.081 26.5736C333.917 33.5754 329.798 36.6563 325.209 42.8251C317.853 50.5137 316.878 56.1209 318.411 67.4441L326.059 134.905C325.82 160.161 323.246 164.641 313.736 153.125C304.395 129.274 300.362 115.115 295.89 88.1256C292.36 76.017 290.223 69.7866 279.318 83.6938L242.351 118.165C238.349 122.321 237.045 125.542 238.527 134.905C239.969 145.126 241.501 153.125 235.977 158.05C227.479 161.497 222.805 150.664 228.754 144.753C241.076 141.801 245.388 141.377 255.098 149.185C273.337 161.961 279.388 164.611 292.491 171.836C321.131 183.786 335.885 181.007 362.177 176.762C387.782 169.283 387.592 166.049 398.719 159.526C433.987 141.471 512.256 106.05 543.19 108.807C574.124 111.565 748.14 143.769 822.358 159.526C924.054 190.723 1114.78 274.488 1064.13 359.971C1000.82 466.826 906.916 458.947 869.099 379.668C831.281 300.389 1053.94 228.496 1091.75 240.807C1129.57 253.117 1314.41 631.293 939.209 663.3C564.011 695.307 515.995 620.459 392.346 796.252C268.696 972.044 187.112 974.506 64.3121 915.909C-58.4879 857.311 78.3343 723.374 144.621 808.07C210.907 892.765 208.783 1113.86 180.314 1173.93C151.844 1234.01 106.379 1382.72 251.274 1362.04C299.289 1362.04 346.88 1377.06 378.748 1376.32C434.205 1375.03 447.86 1376.43 473.504 1382.72C501.433 1394.41 517.685 1396.29 547.014 1397C567.739 1391.44 578.952 1386.96 597.579 1374.35C611.343 1365.38 621.156 1365.09 640.92 1367.45C656.225 1363.23 661.147 1358.46 656.642 1338.89L627.748 1198.06C626.935 1186.99 629.762 1185.92 636.246 1186.25L767.969 1194.62L769.669 1204.96L636.246 1198.06L660.891 1314.27C663.317 1325.54 666.158 1327.64 673.213 1325.6L778.167 1302.95C785.428 1302.17 785.755 1296.13 781.991 1278.82L765.845 1208.4H769.669L790.915 1302.95C792.018 1314.48 790.101 1317.1 783.691 1317.23L671.514 1346.28C660.659 1349.36 657.171 1351.45 665.14 1357.11L773.068 1388.14C787.305 1389.81 789.621 1389.09 778.167 1383.21L668.964 1351.2L700.408 1348.25L801.113 1321.66L852.952 1330.03L750.973 1368.93L700.408 1351.2L801.537 1324.61L798.563 1314.27L898.418 1335.45C891.97 1341.26 886.761 1344.64 871.223 1351.2L839.78 1338.89L798.563 1353.67L820.659 1365.98L857.201 1348.25C863.202 1349.58 862.591 1351.56 858.051 1356.13L796.863 1383.21C790.13 1388.91 792.576 1389.87 801.113 1390.11C844.394 1379.23 865.966 1379.11 901.817 1384.69C936.795 1398.19 956.35 1402.34 991.049 1398.97L1096 1359.08C1114.65 1356.49 1124.49 1356.17 1139.34 1360.56L1286.36 1390.11C1376.3 1412.26 1530.85 1515.15 1363.7 1585.1C1228.21 1641.8 923.825 1615.64 783.691 1600.86C590.469 1604.56 187.805 1585.61 162.467 1653.06C115.43 1778.26 149.034 1921.1 141.646 2052.41C135.409 2163.27 119.126 2251.83 191.786 2299.11C264.446 2346.38 509.197 2299.11 597.579 2299.11C685.961 2299.11 621.374 1626.47 660.891 1629.42C700.408 1632.37 1039.91 1597.91 1125.75 1668.81C1194.41 1725.54 1148.41 2117.08 1125.75 2299.11C990.199 2292.05 708.311 2282.17 665.14 2299.11C611.176 2320.28 332.008 2336.53 291.641 2333.57C251.274 2330.62 72.3855 2306.98 126.35 2414.82C169.521 2501.09 180.314 2561.07 180.314 2580.28C185.979 2617.53 198.245 2699.24 201.984 2728" stroke="white" stroke-width="2"/>
-            </svg>
-         </div>
-
-         <!-- Education -->
-          <div class="education">
+        <section class="about">
             <p>
-                Hi, I'm Eeshika Kashyap, a <span class="accent">UI/UX designer</span> with a unique journey from <span class="accent">Aircraft Maintenance Engineering</span> to the world of design and technology. My fascination with creativity, coding, and digital experiences led me to pursue a <span class="accent">Bachelor's in Computer Applications (BCA)</span>, and I am currently furthering my knowledge with a <span class="accent">Master's in Computer Applications (MCA)</span>.
-                Though I am new to the UI/UX field, my passion for problem-solving, technology, and user-centric design drives me to create intuitive and engaging digital experiences. I'm eager to learn, experiment, and collaborate to bring ideas to life!
+                A <span id="accent">UI/UX Designer</span>passionate about minimalist, user-centric, and accessible design. I create intuitive interfaces that enhance user experiences while ensuring smooth usability.
             </p>
-          </div>
+        </section>
 
-          <!-- Degrees or Certificates -->
-          <div class="degree">
+        <section class="core">
+            <h1>Core Capabilities<br>and Strength</h1>
+        </section>
+
+        <section class="core-containers">
             <table>
-                <tr>
-                    <td class="accent">Aircraft Maintenance Engineering</td>
-                    <td>2021</td>
-                </tr>
-                <tr>
-                    <td class="accent">Bachelor's of Computer Application</td>
-                    <td>2024</td>
-                </tr>
-                <tr>                    
-                    <td class="accent">Google UX Design Professional Certificate Coursera</td>
-                    <td>2024</td>
-                </tr>
-                <tr>                    
-                    <td class="accent">Master's of Computer Application</td>
-                    <td>Persuing</td>
-                </tr>
-            </table>
-        </div>
-        
+                <ul>
+                    <li>01 Streamlining Navigation in Social Apps
 
+                        Identified and resolved redundant navigation paths in social networking apps, ensuring a more intuitive and efficient user experience.</li>
+                    <li>01 Streamlining Navigation in Social Apps
+
+                        Identified and resolved redundant navigation paths in social networking apps, ensuring a more intuitive and efficient user experience.</li>
+                </ul>
+                <ul>
+                    <li>01 Streamlining Navigation in Social Apps
+
+                        Identified and resolved redundant navigation paths in social networking apps, ensuring a more intuitive and efficient user experience.</li>
+                    <li>01 Streamlining Navigation in Social Apps
+
+                        Identified and resolved redundant navigation paths in social networking apps, ensuring a more intuitive and efficient user experience. </li>
+                </ul>
+            </table>
+        </section>
+     
     </main>
 
     <footer>
-        <!-- Footer content (if needed) -->
+        <p>&copy; 2025 EESHIKA KASHYAP. All Rights Reserved.</p>
     </footer>
+    
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="/assets/script.js" defer></script>  
 </body>
 </html>

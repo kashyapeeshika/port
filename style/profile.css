@@ -1,0 +1,227 @@
+/* Reset default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #020100;
+    color: #FDFFFC;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* For the accent color */
+  #accent{
+    /* color: #9BE564; */
+    /* color: #69FFF1; */
+    color: #00BB70;
+  }
+  
+  /* Custom Fonts */
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('/assets/Spider_Bite.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Global Styles */
+  body {
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5rem; 
+  }
+
+  
+/* Navigation Bar */
+nav,
+.links,
+footer{
+  width: 100%; 
+  max-width: 80rem;
+  max-width: 2681px; 
+  margin: 0 auto;
+  border: 1px solid red;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 0;
+  /* padding-right: 90px; */
+}
+
+/* Logo Styling */
+.logo a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-left: 90px;
+}
+
+
+/* Remove default list styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+nav li {
+  position: relative;
+  margin-left: 20px;
+  z-index: 2;
+}
+
+/* Links */
+nav li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Dropdown Menu (Initially Hidden) */
+.dropdown-menu {
+  position: absolute;
+  top: 56px;
+  right: -30px;
+  border: 1px solid red;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Active Dropdown (Show on Click) */
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+footer{
+    position: relative;
+    top: 10rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  /* 4K Ultra-Wide Screens (2560px and above) */
+  @media (min-width: 2560px) {
+    nav,
+    .links {
+      max-width: 2681px;
+    }
+  
+    .intro {
+      max-width: 1440px;
+      width: 80%; 
+      left: 15%;
+      position: absolute;
+    }
+  
+  }
+  
+  
+  /* XL */
+  @media (max-width: 1440px) {
+    .intro{
+      max-width: 1024px;
+      left: 8%;
+    }
+  
+    .intro h1{
+      font-size: 100px;
+    }
+  }
+  
+  
+  
+  /* LG */
+  @media (max-width: 1024px) {
+    .intro{
+      max-width: 768px;
+      left: 5%;
+    }
+  
+    .intro h1{
+      font-size: 80px;
+    }
+  
+  }
+  
+  
+  /* SM (Max 640px) - Adjust for Mobile */
+  @media (max-width: 768px) {
+    nav,
+    .links {
+      flex-direction: column; 
+      align-items: flex-end;
+    }
+    
+    nav ul {
+      flex-direction: column;
+    }
+  
+    .intro {
+      width: 100%;
+      max-width: 425px;
+      text-align: center;
+      padding: 10px;
+      top: 19.5%;
+    }
+  
+    .intro h1{
+      font-size: 50px;
+    }
+  }
+  
+  /* XS (Max 475px) - Small Mobile */
+  @media (max-width: 425px) {
+    .intro {
+      width: 100%;
+      max-width: 96%;
+      text-align: center;
+      padding: 5px;
+      top: 19.5%;
+      left: 2%;
+    }
+  
+    .intro h1{
+      font-size: 60px;
+    }
+  
+    .logo{
+      font-size: 60px;
+    }
+  
+  }
+  
