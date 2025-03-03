@@ -9,7 +9,7 @@
 }
 
 /* For the accent color */
-#accent{
+.accent{
   color: #377771;
 }
 
@@ -26,6 +26,8 @@ body {
   max-width: 2560px;
   margin: 0 auto;
   padding: 0 0.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
@@ -155,7 +157,6 @@ nav li a {
 }
 
 /* Project Container */
-/* Project Container */
 .project-container {
   display: flex;
   flex-direction: column;
@@ -186,10 +187,60 @@ nav li a {
   max-width: 600px; 
 }
 
-.projects h1:hover {
-  background-color: #377771;
-  color: #000103;
+/*Designer animation  */
+.ml2 {
+  font-size: 9rem;
+  font-weight: bold;
+  display: inline-block;
 }
+
+.letter {
+  display: inline-block;
+}
+
+/* Reveal Animation Styles */
+[data-js="reveal"] {}
+
+[data-reveal="content"] {
+  display: inline-block;
+  position: relative;
+}
+
+[data-reveal="cover"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: 1;
+}
+
+[data-reveal="text"] {
+  opacity: 0;
+}
+
+@keyframes reveal-cover {
+  0%   { width: 0; left: 0; }
+  44%  { width: 100%; left: 0; }
+  54%  { width: 100%; left: 0; }
+  100% { width: 0; left: 100%; }
+}
+
+@keyframes reveal-text {
+  0%   { opacity: 0; }
+  44%  { opacity: 0; }
+  54%  { opacity: 1; }
+}
+
+[data-js="reveal"].loaded [data-reveal="cover"] {
+  animation: reveal-cover 1.5s ease-in-out;
+}
+
+[data-js="reveal"].loaded [data-reveal="text"] {
+  opacity: 1;
+  animation: reveal-text 1.5s ease-in-out;
+}
+
 
 
 footer{
