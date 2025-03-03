@@ -3,16 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #020100;
-  color: #FDFFFC;
+  background-color: #000103;
+  color:  #D4EAC8;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* For the accent color */
 #accent{
-  /* color: #9BE564; */
-  /* color: #69FFF1; */
-  color: #00BB70;
+  color: #377771;
 }
 
 /* Custom Fonts */
@@ -34,15 +32,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5rem; 
+  text-align: center;
+  padding: 2rem;
 }
 
 
 .intro,
 .links{
-  margin-bottom: 5rem;
-  margin-top: 5rem;
-
+  margin: 5rem;
 }
 
 /* Navigation Bar */
@@ -50,17 +47,13 @@ nav,
 .links,
 footer{
   width: 100%; 
-  max-width: 80rem;
   max-width: 2681px; 
   margin: 0 auto;
-  border: 1px solid red;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.1rem;
-  position: absolute;
-  left: 0;
 }
 
 /* Logo Styling */
@@ -72,21 +65,16 @@ footer{
   padding-left: 90px;
 }
 
-
 /* Remove default list styles */
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   align-items: center;
 }
 
-
 nav li {
   position: relative;
-  margin-left: 20px;
-  z-index: 2;
+  margin: 0 20px;
 }
 
 /* Links */
@@ -102,18 +90,11 @@ nav li a {
   position: absolute;
   top: 56px;
   right: -30px;
-  border: 1px solid red;
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: none;
   min-width: 150px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-menu li {
-  display: block;
 }
 
 .dropdown-menu a {
@@ -131,16 +112,16 @@ nav li a {
   display: block;
 }
 
-.intro {
+.intro,
+.container,
+.project-desp {
   display: flex;
-  align-items: center;
-  position: relative;
-  top: 5.5rem; 
-  left: 5%;
+  align-items:flex-start;
+  text-align: left;
+  margin-top: 5rem;
   width: 90%;
   max-width: 80rem;
   padding: 20px;
-  border: 1px solid red;
 }
 
 .intro h1{
@@ -149,255 +130,151 @@ nav li a {
 
 .links {
   display: flex;
-  margin-top: auto; 
-  position: absolute;
-  top: 50em;
-  left: 0;
-  padding-left: 90px;
+  margin-top: 8rem; 
 }
 
 .links a {
   text-decoration: none;
 }
 
-.container{
-  display: flex;
-  align-items: center;
-  position: relative;
-  top: 10rem;
-  left: 5rem;
-  width: 90%;
-  max-width: 80rem;
-  padding: 20px;
-  font-size: 6rem;
-  border: 1px solid red;
-  margin-top: 5rem;
+/* Projects Section */
+.container {
+  text-align: center;
 }
 
-.project-desp{
-  display: flex;
-  align-items: center;
-  position: relative;
-  top: 10rem;
-  left: 5rem;
-  width: 90%;
-  max-width: 80rem;
-  padding: 20px;
-  font-size: 4rem;
-  border: 1px solid red;
-
+.container h1 {
+  font-size: 3rem;
+  font-weight: bold;
 }
 
-.project-container{
+/* Project Description */
+.project-desp {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Project Container */
+/* Project Container */
+.project-container {
   display: flex;
-  align-items: center;
-  position: relative;
-  top: 10rem;
-  left: 5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
   width: 100%;
-  max-width: 80rem;
-  padding: 20px;
-  border: 1px solid red;
 }
 
-.project-container h1 {
-  width: 20rem;
-  margin-bottom: 5rem;
-  border-bottom: 2px solid #00BB70; 
+/* Individual Project */
+.projects {
+  display: flex;
+  flex-direction: column; 
+  gap: 2.5rem;
+  align-items: flex-start;
+  width: 100%;
 }
+
+/* Project Box */
+.projects h1 {
+  font-size: 2.5rem; 
+  border-bottom: 3px solid #377771; 
+  padding: 2rem 5rem; 
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: left;
+  width: 60%; 
+  max-width: 600px; 
+}
+
+.projects h1:hover {
+  background-color: #377771;
+  color: #000103;
+}
+
 
 footer{
   position: relative;
-  top: 10rem;
-  margin-top: 5rem;
   display: flex;
   justify-content: center;
 }
 
-
-/* 4K Ultra-Wide Screens (2560px and above) */
-@media (min-width: 2716px) {
-  nav,
-  .links {
-    max-width: 2681px;
-  }
-
-  .intro,
-  .container,
-  .project-container,
-  .project-desp {
-    max-width: 1440px;
-    width: 80%; 
-    left: 15%;
-    position: absolute;
-  }
-
-}
-
-
-/* XL */
+/* Responsive Design */
 @media (max-width: 1440px) {
-  .intro,
-  .container,
-  .project-container,
-  .project-desp {
-    max-width: 1024px;
-    left: 8%;
-  }
-
-  .intro h1,
-  .container h1{
+  .intro h1 {
     font-size: 100px;
   }
 
-  .links{
-    top: 42rem;
+  .container h1 {
+    font-size: 2.5rem;
+  }
+
+  .projects h1 {
+    font-size: 1.8rem;
+    padding: 1.2rem 2.5rem;
   }
 }
 
-
-
-/* LG */
 @media (max-width: 1024px) {
-  main{
-    gap: 3rem;
-  }
-
-  .intro,
-  .container,
-  .project-container,
-  .project-desp {
-    max-width: 768px;
-    left: 5%;
-  }
-
-  .intro h1,
-  .container h1{
+  .intro h1 {
     font-size: 80px;
   }
 
-}
-
-
-/* SM (Max 640px) - Adjust for Mobile */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: row; /* Keep items in a row */
-    justify-content: space-between; /* Ensures logo is on left & links on right */
-    align-items: center;
+  .container h1 {
+    font-size: 2rem;
   }
 
-  .logo {
-    justify-content: flex-start; /* Aligns logo to the left */
-  }
-
-  .links {
-    flex-direction: column; 
-    align-items: flex-end;
-  }
-  
-  nav ul {
+  .projects {
     flex-direction: column;
-  }
-
-  
-  .links{
-    position: relative;
-    top: 5rem;
-  }
-
-  .intro,
-  .container,
-  .project-container,
-  .project-desp  {
-    width: 100%;
-    max-width: 425px;
-    text-align: center;
-    top: 8rem;
-  }
-
-  .container{
-    top: 1rem;
-  }
-
-  .project-desp{
-    top: 1rem;
-    font-size: 20px;
-    text-align: start;
-  }
-
-  .project-container{
-    top: 1rem;
-    text-align: start;
-  }
-
-  .intro h1,
-  .container h1{
-    font-size: 50px;
-  }
-
-  footer{
-    top: 1rem;
-  }
-}
-
-/* XS (Max 475px) - Small Mobile */
-@media (max-width: 425px) {
-  nav {
-    flex-direction: row; /* Keep items in a row */
-    justify-content: space-between; /* Ensures logo is on left & links on right */
-    align-items: center;
-  }
-
-  .logo {
-    justify-content: flex-start; /* Aligns logo to the left */
-  }
-
-  .links {
-    flex-direction: column; 
-    align-items: flex-end;
-  }
-  
-  nav ul {
-    flex-direction: column;
-  } 
-
-  .logo{
     align-items: flex-start;
   }
 
-  .links {
-    position: relative;
-    top: 5rem;
+  .projects h1 {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .intro,
-  .container,
-  .project-container,
-  .project-desp {
-    width: 100%;
-    max-width: 375px; /* Adjusted for smaller screens */
-    text-align: center;
-    top: 8rem;
+  .intro h1 {
+    font-size: 50px;
   }
 
-  .container {
-    top: 1rem;
-  }
-
-  .project-desp {
-    top: 1rem;
-    font-size: 18px; /* Slightly reduced for better fit */
-    text-align: start;
-  }
-
-  .project-container {
-    top: 1rem;
-    text-align: start;
-  }
-
-  .intro h1,
   .container h1 {
-    font-size: 45px; /* Adjusted slightly for smaller screens */
+    font-size: 1.8rem;
+  }
+
+  .project-desp {
+    font-size: 1.3rem;
+  }
+
+  .projects h1 {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .intro {
+    max-width: 100%;
+    text-align: justify;
+    padding: 10px;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-desp {
+    font-size: 1.2rem;
+  }
+
+  .projects h1 {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
   }
 }
