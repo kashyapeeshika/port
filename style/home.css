@@ -11,6 +11,7 @@
 /* For the accent color */
 .accent{
   color: #377771;
+  
 }
 
 /* Custom Fonts */
@@ -124,72 +125,16 @@ nav li a {
   width: 90%;
   max-width: 80rem;
   padding: 20px;
+  color: white;
 }
 
 .intro h1{
   font-size: 150px;
 }
 
-.links {
-  display: flex;
-  margin-top: 8rem; 
-}
-
-.links a {
-  text-decoration: none;
-}
-
-/* Projects Section */
-.container {
-  text-align: center;
-}
-
-.container h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-/* Project Description */
-.project-desp {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-/* Project Container */
-.project-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 2rem;
-  width: 100%;
-}
-
-/* Individual Project */
-.projects {
-  display: flex;
-  flex-direction: column; 
-  gap: 2.5rem;
-  align-items: flex-start;
-  width: 100%;
-}
-
-/* Project Box */
-.projects h1 {
-  font-size: 2.5rem; 
-  border-bottom: 3px solid #377771; 
-  padding: 2rem 5rem; 
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  text-align: left;
-  width: 60%; 
-  max-width: 600px; 
-}
-
 /*Designer animation  */
 .ml2 {
-  font-size: 9rem;
+  font-size: 150px;
   font-weight: bold;
   display: inline-block;
 }
@@ -241,6 +186,94 @@ nav li a {
   animation: reveal-text 1.5s ease-in-out;
 }
 
+/* Developer animation */
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line1 { 
+  top: 0; 
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+  color: #377771;
+}
+
+.links {
+  display: flex;
+  margin-top: 8rem; 
+}
+
+.links a {
+  text-decoration: none;
+}
+
+/* Projects Section */
+.container {
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Project Description */
+.project-desp {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+
+/* Project Container */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Individual Project */
+.projects {
+  display: flex;
+  flex-direction: column; 
+  gap: 2.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Project Box */
+.projects h1 {
+  font-size: 2.5rem; 
+  border-bottom: 3px solid #377771; 
+  padding: 2rem 5rem; 
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: left;
+  width: 60%; 
+  max-width: 600px; 
+}
+
 
 
 footer{
@@ -251,7 +284,8 @@ footer{
 
 /* Responsive Design */
 @media (max-width: 1440px) {
-  .intro h1 {
+  .intro h1,
+  .ml2 {
     font-size: 100px;
   }
 
@@ -266,7 +300,8 @@ footer{
 }
 
 @media (max-width: 1024px) {
-  .intro h1 {
+  .intro h1,
+  .ml2 {
     font-size: 80px;
   }
 
@@ -291,7 +326,8 @@ footer{
     justify-content: space-between;
   }
 
-  .intro h1 {
+  .intro h1,
+  .ml2 {
     font-size: 50px;
   }
 
