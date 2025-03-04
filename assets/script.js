@@ -1,3 +1,33 @@
+// For Index dropdown
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".dropdown > a").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent default link action
+
+      let parentDropdown = this.parentElement;
+      let isActive = parentDropdown.classList.contains("active");
+
+      // Close all dropdowns
+      document.querySelectorAll(".dropdown").forEach(dropdown => {
+        dropdown.classList.remove("active");
+      });
+
+      // Toggle current dropdown
+      if (!isActive) {
+        parentDropdown.classList.add("active");
+      }
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown").forEach(dropdown => {
+        dropdown.classList.remove("active");
+      });
+    }
+  });
+});
 
 
 // Designer animation
@@ -79,21 +109,22 @@ anime.timeline()
 });
 
 // Project animation
-document.addEventListener("DOMContentLoaded", function() {
-  let observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              anime({
-                  targets: '.ml10',
-                  opacity: [0, 1],
-                  translateX: [-100, 0], 
-                  easing: "easeOutExpo",
-                  duration: 1000
-              });
-              observer.unobserve(entry.target); 
-          }
-      });
-  }, { threshold: 0.5 }); 
+document.addEventListener("DOMContentLoaded", function () {
+  let observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        anime({
+          targets: entry.target, // Animate the specific element
+          opacity: [0, 1],
+          translateX: [-100, 0],
+          easing: "easeOutExpo",
+          duration: 1000
+        });
+        observer.unobserve(entry.target); // Stop observing after animation
+      }
+    });
+  }, { threshold: 0.5 });
 
-  observer.observe(document.querySelector('.ml10'));
+  // Select all elements with .ml10 and observe them
+  document.querySelectorAll('.ml10').forEach(el => observer.observe(el));
 });

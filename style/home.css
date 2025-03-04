@@ -98,11 +98,16 @@ nav li a {
   min-width: 150px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .dropdown-menu a {
   padding: 10px 15px;
   display: block;
+  color: rgb(255, 255, 255); 
   transition: 0.3s;
 }
 
@@ -113,6 +118,9 @@ nav li a {
 /* Active Dropdown (Show on Click) */
 .dropdown.active .dropdown-menu {
   display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .intro,
@@ -249,8 +257,6 @@ nav li a {
   transform: translateY(100%); /* Start below */
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
-
-
 
 /* Project Container */
 .project-container {

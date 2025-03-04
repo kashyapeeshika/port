@@ -170,7 +170,28 @@ nav li a {
   margin-bottom: 1rem;
   align-self: flex-start; 
   text-align: left; 
+  transition: all 0.3s ease-in-out;
+  max-width: 60rem;
 }
+
+/* 
+.co{
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 60%; 
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent; 
+  transition: width 0.5s ease-in-out, border-bottom-width 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.co:hover {
+  width: 100%; 
+  max-width: 1440px;
+  border-bottom-width: 6px; 
+  border-color: #377771; 
+  cursor: url("/assets/echo.png") 32 32, pointer; 
+} */
 
 .core-containers p {
   width: 100%; 
@@ -181,6 +202,7 @@ nav li a {
 
 footer{
   position: relative;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
 }
