@@ -2,24 +2,24 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".dropdown > a").forEach(link => {
     link.addEventListener("click", function (e) {
-      e.preventDefault(); // Prevent default link action
+      e.preventDefault(); 
 
       let parentDropdown = this.parentElement;
       let isActive = parentDropdown.classList.contains("active");
 
-      // Close all dropdowns
+     
       document.querySelectorAll(".dropdown").forEach(dropdown => {
         dropdown.classList.remove("active");
       });
 
-      // Toggle current dropdown
+      
       if (!isActive) {
         parentDropdown.classList.add("active");
       }
     });
   });
 
-  // Close dropdown when clicking outside
+ 
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".dropdown")) {
       document.querySelectorAll(".dropdown").forEach(dropdown => {
@@ -38,7 +38,7 @@ textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, (match) => {
 let randomColor = colors[Math.floor(Math.random() * colors.length)];
   return `<span class='letter' style='color:${randomColor}'>${match}</span>`;
 });
-anime.timeline({ loop: false })  // Run once
+anime.timeline({ loop: false })  
 .add({
       targets: '.ml2 .letter',
       scale: [4, 1],
@@ -49,14 +49,10 @@ anime.timeline({ loop: false })  // Run once
       delay: (el, i) => 70 * i
     });
 
-
-
-
 // Developer word animation 
 var textWrapper = document.querySelector('.ml11 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
 
-// Anime.js timeline (runs once)
 anime.timeline()
   .add({
     targets: '.ml11 .line',
@@ -87,8 +83,8 @@ anime.timeline()
     easing: "easeOutExpo"
   }); 
 
+
   // Project desprtion animation 
-  // Apply animation to the paragraph inside .project-desp
   document.addEventListener("DOMContentLoaded", function() {
     let observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
@@ -98,7 +94,7 @@ anime.timeline()
                     opacity: [0, 1],
                     translateY: [100, 0], 
                     easing: "easeOutExpo",
-                    duration: 1000
+                    duration: 1000,
                 });
                 observer.unobserve(entry.target); 
             }
@@ -111,20 +107,22 @@ anime.timeline()
 // Project animation
 document.addEventListener("DOMContentLoaded", function () {
   let observer = new IntersectionObserver(function (entries, observer) {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        anime({
-          targets: entry.target, // Animate the specific element
-          opacity: [0, 1],
-          translateX: [-100, 0],
-          easing: "easeOutExpo",
-          duration: 1000
-        });
-        observer.unobserve(entry.target); // Stop observing after animation
+        setTimeout(() => { 
+          anime({
+            targets: entry.target,
+            opacity: [0, 1],
+            translateX: [-100, 0],
+            easing: "easeOutExpo",
+            duration: 1000
+          });
+        }, index * 500); 
+
+        observer.unobserve(entry.target); 
       }
     });
   }, { threshold: 0.5 });
 
-  // Select all elements with .ml10 and observe them
   document.querySelectorAll('.ml10').forEach(el => observer.observe(el));
 });
