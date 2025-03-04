@@ -52,7 +52,48 @@ anime.timeline()
   })
   .add({
     targets: '.ml11 .line',
-    opacity: 0,
+    opacity: 1,
     duration: 500,
     easing: "easeOutExpo"
   }); 
+
+  // Project desprtion animation 
+  // Apply animation to the paragraph inside .project-desp
+  document.addEventListener("DOMContentLoaded", function() {
+    let observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: '.ml12',
+                    opacity: [0, 1],
+                    translateY: [100, 0], 
+                    easing: "easeOutExpo",
+                    duration: 1000
+                });
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, { threshold: 0.5 }); 
+
+    observer.observe(document.querySelector('.ml12'));
+});
+
+// Project animation
+document.addEventListener("DOMContentLoaded", function() {
+  let observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              anime({
+                  targets: '.ml10',
+                  opacity: [0, 1],
+                  translateX: [-100, 0], 
+                  easing: "easeOutExpo",
+                  duration: 1000
+              });
+              observer.unobserve(entry.target); 
+          }
+      });
+  }, { threshold: 0.5 }); 
+
+  observer.observe(document.querySelector('.ml10'));
+});

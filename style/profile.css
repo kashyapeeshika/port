@@ -181,8 +181,6 @@ nav li a {
 
 footer{
   position: relative;
-  top: 10rem;
-  margin-top: 5rem;
   display: flex;
   justify-content: center;
 }

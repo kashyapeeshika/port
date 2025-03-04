@@ -242,6 +242,15 @@ nav li a {
   margin-bottom: 3rem;
 }
 
+/* Ensures smooth text animation */
+.ml12 {
+  display: inline-block;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100%); /* Start below */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+
 
 /* Project Container */
 .project-container {
@@ -262,19 +271,35 @@ nav li a {
   width: 100%;
 }
 
+
 /* Project Box */
 .projects h1 {
   font-size: 2.5rem; 
   border-bottom: 3px solid #377771; 
   padding: 2rem 5rem; 
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
   text-align: left;
   width: 60%; 
   max-width: 600px; 
 }
 
+.project {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 60%; 
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent; 
+  transition: width 0.5s ease-in-out, border-bottom-width 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
 
+.project:hover {
+  width: 100%; 
+  max-width: 1440px;
+  border-bottom-width: 6px; 
+  border-color: #377771; 
+  cursor: url("/assets/echo.png") 32 32, pointer; 
+}
 
 footer{
   position: relative;
