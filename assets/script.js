@@ -1,33 +1,21 @@
 // For Index dropdown
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".dropdown > a").forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault(); 
+  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdown = document.querySelector(".dropdown");
 
-      let parentDropdown = this.parentElement;
-      let isActive = parentDropdown.classList.contains("active");
-
-     
-      document.querySelectorAll(".dropdown").forEach(dropdown => {
-        dropdown.classList.remove("active");
-      });
-
-      
-      if (!isActive) {
-        parentDropdown.classList.add("active");
-      }
-    });
+  dropdownToggle.addEventListener("click", function (event) {
+      event.preventDefault(); 
+      dropdown.classList.toggle("opened"); 
   });
 
- 
-  document.addEventListener("click", function (e) {
-    if (!e.target.closest(".dropdown")) {
-      document.querySelectorAll(".dropdown").forEach(dropdown => {
-        dropdown.classList.remove("active");
-      });
-    }
+
+  document.addEventListener("click", function (event) {
+      if (!dropdown.contains(event.target)) {
+          dropdown.classList.remove("opened");
+      }
   });
 });
+
 
 
 // Designer animation

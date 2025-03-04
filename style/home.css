@@ -83,9 +83,13 @@ nav li {
 /* Links */
 nav li a {
   text-decoration: none;
-  padding: 10px 15px;
   display: block;
   transition: 0.3s;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav a:hover{
@@ -95,39 +99,88 @@ nav a:hover{
 }
 
 /* Dropdown Menu (Initially Hidden) */
+.dropdown {
+  width: 150px;
+  height: 60px;
+  position: relative;
+  color: #D4EAC8;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Dropdown Menu */
 .dropdown-menu {
-  position: absolute;
-  top: 56px;
-  right: -30px;
+  display: inline-block;
   list-style: none;
-  display: none;
-  min-width: 150px;
-  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  outline: none;
   opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  
 }
 
-.dropdown-menu a {
-  padding: 10px 15px;
+/* Show Dropdown When Opened */
+.dropdown.opened .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Dropdown Menu Options */
+.dropdown-menu li {
+  transition: all 0.25s ease;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
   display: block;
-  color: #D4EAC8; 
-  transition: 0.3s;
+  width: 100%;
+  color: #D4EAC8;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.dropdown-menu a:hover {
+/* Hover Effect */
+.dropdown-menu li:hover {
   background: #377771;
 }
 
-/* Active Dropdown (Show on Click) */
-.dropdown.active .dropdown-menu {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+/* Arrow Animation */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 25px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #999;
+  border-top: transparent;
+  border-right: transparent;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
 }
 
+/* Rotate Arrow When Dropdown is Open */
+.dropdown.opened::before {
+  transform: rotate(135deg);
+  border-color: #488AF5;
+}
 .intro,
 .container,
 .project-desp {
