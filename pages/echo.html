@@ -17,7 +17,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">Index</a>
                     <ul class="dropdown-menu">
-                        <li><a href="/pages/profile.html">Profile</a></li>
+                        <!-- <li><a href="/pages/profile.html">Profile</a></li> -->
                         <li><a href="/pages/echo.html">Echo</a></li>
                         <li><a href="/pages/dashboard.html">Dashboard</a></li>
                         <li><a href="/pages/pal.html">Pal</a></li>
@@ -29,13 +29,24 @@
 
     <main>
         <section class="hero">
-            <h1>Solving Cognitive Load in Social Apps</h1>
-            <p>Echo UI Kit simplifies navigation, enhances design, and improves user experience.</p>
-            <img src="/assets/echo.png" alt="Echo UI Kit Preview">
+            <h1 class="accent">Solving Cognitive Load in Social Apps</h1>
         </section>
-    
+
+        <section>
+            <p>Echo UI Kit simplifies navigation, enhances design, and improves user experience.</p>
+        </section>
+
+        <section>
+            <div class="flex">
+                <div class="image" data-splitting>
+                    <img alt="Echo UI Kit" src="/assets/echo.png" />
+                </div>
+            </div>
+        </section>
+        
+        
         <section class="intro">
-            <p>Transform your next chat app project with Echo, a sleek and fully customizable UI Kit designed for modern communication platforms. Whether you're creating a messaging app, a customer support interface, or a social networking feature, Echo has everything you need to streamline your design process.</p>
+            <p>Transform your next chat app project with Echo, a sleek and fully customizable <span id="accent">UI Kit designed</span>  for modern communication platforms. Whether you're creating a messaging app, a customer support interface, or a social networking feature, Echo has everything you need to streamline your design process.</p>
         </section>
     
         <section class="features">
@@ -56,11 +67,31 @@
                 <p>Optimized navigation flows for seamless accessibility.</p>
             </div>
         </section>
+
+            <!-- <section class="core-containers ml13">
+            <div class="core-desp">
+                <h3><span>01</span>  Designing User-Centered Interfaces</h3>
+                <p>Conduct user research, create wireframes, prototypes, and usability tests to design intuitive and accessible digital experiences.</p>
+            </div>
+            <div class="core-desp">
+                <h3><span>02</span>  Building Scalable UI Systems</h3>
+                <p>Develop consistent design systems for chat apps and dashboards, ensuring minimalist, user-friendly, and responsive interfaces using Figma.</p>
+            </div>
+            <div class="core-desp">
+                <h3><span>03</span>  Developing & Optimizing Web Interfaces</h3>
+                <p>Transform designs into functional, high-performance applications using React.js, JavaScript, and Material-UI, while ensuring accessibility and responsiveness.</p>
+            </div>
+            <div class="core-desp">
+                <h3><span>04</span> Enhancing Digital Security & Performance</h3>
+                <p>Leverage blockchain technologies (Solidity, Ethereum, Web.js) and modern web practices to develop privacy-focused applications, ensuring seamless, secure, and decentralized user experiences.</p>
+            </div>
+        </section> -->
     </main>
     
-
     <!-- GSAP Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="/assets/script.js" defer></script>  
 </body>
 </html>

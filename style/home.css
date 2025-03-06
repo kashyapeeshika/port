@@ -65,7 +65,11 @@ footer{
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin-left: 90px;
+  margin-left: 50px;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Remove default list styles */
@@ -77,7 +81,7 @@ nav ul {
 
 nav li {
   position: relative;
-  margin: 0 20px;
+  /* margin: 0 20px; */
 }
 
 /* Links */
@@ -181,6 +185,7 @@ nav a:hover{
   transform: rotate(135deg);
   border-color: #488AF5;
 }
+
 .intro,
 .container,
 .project-desp {
@@ -191,7 +196,6 @@ nav a:hover{
   width: 90%;
   max-width: 80rem;
   padding: 20px;
-  color: white;
 }
 
 .intro h1{

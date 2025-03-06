@@ -103,7 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
             opacity: [0, 1],
             translateX: [-100, 0],
             easing: "easeOutExpo",
-            duration: 1000
+            duration: 1000,
+            delay: 500
           });
         }, index * 500); 
 
@@ -114,3 +115,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll('.ml10').forEach(el => observer.observe(el));
 });
+
+// core container animation
+document.addEventListener("DOMContentLoaded", function() {
+  let observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              anime({
+                  targets: '.ml13',
+                  opacity: [0, 1],
+                  translateY: [100, 0], 
+                  easing: "easeOutExpo",
+                  duration: 1000,
+                  delay: 1000
+              });
+              observer.unobserve(entry.target); 
+          }
+      });
+  }, { threshold: 0.5 }); 
+
+  observer.observe(document.querySelector('.ml13'));
+});
+
+// Imange animation
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Splitting
+  const results = Splitting({
+      target: "[data-splitting]",
+      by: "cells",
+      image: true,
+      rows: 8,
+      columns: 8
+  });
+
+  // Create intersection observer for animation
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              animateCells(entry.target);
+              observer.unobserve(entry.target);
+          }
+      });
+  }, {
+      threshold: 0.2
+  });
+
+  // Observe the image element
+  document.querySelectorAll('.image').forEach(img => observer.observe(img));
+});
+
+function animateCells(element) {
+  const cells = element.querySelectorAll('.cell');
+  
+  gsap.to(cells, {
+      opacity: 1,
+      x: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      stagger: {
+          amount: 1,
+          grid: [8, 8],
+          from: "random"
+      }
+  });
+}
