@@ -1,23 +1,30 @@
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000103;
-  color:  #D4EAC8;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #23262F;
+  color: #E9DCD8;
+  font-family: 'CustomFont2';
 }
 
 /* For the accent color */
-#accent{
-  color: #377771;
+.accent{
+  /* color: #377771; */
+  color: #8BCAE5;
+  
 }
-
 /* Custom Fonts */
 @font-face {
   font-family: 'CustomFont';
-  src: url('/assets/Spider_Bite.ttf') format('truetype');
+  src: url('/assets/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomFont2';
+  src: url('/assets/Lato-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -90,8 +97,10 @@ nav li a {
 }
 
 nav a:hover{
-  color: #D4EAC8;
-  background-color: #37777180;
+  color: #E9DCD8
+;
+  background-color: #8BCAE5
+80;
   border-radius: 8px;
 }
 
@@ -100,7 +109,8 @@ nav a:hover{
   width: 150px;
   height: 60px;
   position: relative;
-  color: #D4EAC8;
+  color: #E9DCD8
+;
 }
 
 .dropdown-toggle {
@@ -146,7 +156,7 @@ nav a:hover{
   text-decoration: none;
   display: block;
   width: 100%;
-  color: #D4EAC8;
+  color: #E9DCD8;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -155,7 +165,8 @@ nav a:hover{
 
 /* Hover Effect */
 .dropdown-menu li:hover {
-  background: #377771;
+  background: #8BCAE5
+;
 }
 
 /* Arrow Animation */
@@ -244,7 +255,8 @@ img {
 .ml11 .letter {
   display: inline-block;
   line-height: 1em;
-  color: #377771;
+  color: #8BCAE5
+;
 }
 
 
@@ -281,7 +293,8 @@ img {
 }
 .core-desp {
   padding: 1.5rem;
-  border: 1px solid #377771;
+  border: 1px solid #8BCAE5
+;
   border-radius: 10px;
   text-align: left;
 }
@@ -291,7 +304,8 @@ margin-bottom: 2rem;
 
 .core-desp span {
   font-weight: bold;
-  color: #377771;
+  color: #8BCAE5
+;
 }
 
 
