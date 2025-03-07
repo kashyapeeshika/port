@@ -137,45 +137,13 @@ document.addEventListener("DOMContentLoaded", function() {
   observer.observe(document.querySelector('.ml13'));
 });
 
-// Imange animation
-document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Splitting
-  const results = Splitting({
-      target: "[data-splitting]",
-      by: "cells",
-      image: true,
-      rows: 8,
-      columns: 8
-  });
-
-  // Create intersection observer for animation
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              animateCells(entry.target);
-              observer.unobserve(entry.target);
-          }
-      });
-  }, {
-      threshold: 0.2
-  });
-
-  // Observe the image element
-  document.querySelectorAll('.image').forEach(img => observer.observe(img));
+// Image
+anime({
+  targets: '#animatedImage',
+  translateX: [1000, 0], 
+  duration: 1000,
+  easing: 'easeInOutQuad',
+  direction: 'alternate',
+  loop: false,
+  delay: 1000
 });
-
-function animateCells(element) {
-  const cells = element.querySelectorAll('.cell');
-  
-  gsap.to(cells, {
-      opacity: 1,
-      x: 0,
-      duration: 0.8,
-      ease: "power2.out",
-      stagger: {
-          amount: 1,
-          grid: [8, 8],
-          from: "random"
-      }
-  });
-}
